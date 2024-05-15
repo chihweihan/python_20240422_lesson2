@@ -1,9 +1,5 @@
 import pyinputplus as pyip
 
-name = pyip.inputStr("請輸入姓名：")
-height = pyip.inputFloat("請輸入身高(cm)：")
-weight = pyip.inputFloat("糗輸入體重(kg)：")
-
 def bmi(height:float,weight:float):
     return weight / (height / 100) ** 2
 
@@ -22,6 +18,18 @@ def get_status(bmi:float):
         result = "重度肥胖"
     return result
 
-BMI = bmi(height,weight)
-print(f"{name}，您的BMI：{BMI}")
-print(f"{name}，您屬於：{get_status(BMI)}")
+def finish():
+    name = pyip.inputStr("請輸入姓名：")
+    height = pyip.inputFloat("請輸入身高(cm)：")
+    weight = pyip.inputFloat("糗輸入體重(kg)：")
+    BMI = bmi(height,weight)
+    print(f"{name}，您的BMI：{BMI:.2f}")
+    print(f"{name}，您屬於：{get_status(BMI)}")
+
+while True:
+    finish()
+    play_again=pyip.inputYesNo('還要下一位量測嗎?(y,n)\n')
+    if play_again =='no':
+        break
+
+print('量測結束\n') 
