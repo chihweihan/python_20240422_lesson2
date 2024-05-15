@@ -1,9 +1,9 @@
 import pyinputplus as pyip
 
-def bmi(height:float,weight:float):
+def bmi(height:float,weight:float) -> float:
     return weight / (height / 100) ** 2
 
-def get_status(bmi:float):
+def get_status(bmi:float) -> str:
     if bmi < 18.5:
         result = "體重過輕"
     elif bmi < 24:
@@ -23,8 +23,9 @@ def finish():
     height = pyip.inputFloat("請輸入身高(cm)：")
     weight = pyip.inputFloat("糗輸入體重(kg)：")
     BMI = bmi(height,weight)
+    status = get_status(BMI)
     print(f"{name}，您的BMI：{BMI:.2f}")
-    print(f"{name}，您屬於：{get_status(BMI)}")
+    print(f"{name}，您屬於：{status}")
 
 while True:
     finish()
