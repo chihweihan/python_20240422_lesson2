@@ -3,3 +3,4 @@ Pydantic
 requests
 matplotlib
 numpy
+pandas
