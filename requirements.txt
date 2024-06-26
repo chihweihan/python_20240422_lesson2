@@ -7,4 +7,3 @@ pandas
 openpyxl
 pandas-datareader
 yfinance
-ipywidgets
