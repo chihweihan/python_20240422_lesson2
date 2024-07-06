@@ -8,3 +8,4 @@ Dev Containers
 本地端延伸模組  -> 灌 jupyter notebook -> 切換至發行版本
 
 中斷應用程式 ctrl+C
+若本機與遠端檔案衝突，終端機bash  ：git push -f (將遠端衝突的蓋掉)
